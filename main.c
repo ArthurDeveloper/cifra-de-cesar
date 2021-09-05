@@ -55,8 +55,10 @@ int main() {
 
     setlocale(LC_ALL, "portuguese");
 
-    char message[] = "amor";
-    printf("Texto: %s", message);
+    char message[100];
+    printf("Digite algum texto: \n");
+    scanf("%[^\n]s%*c", message);
+    printf("\n\nTexto: %s", message);
     encrypt(message, 2);
     printf("\nTexto cifrado: %s", message);
     decrypt(message, 2);
